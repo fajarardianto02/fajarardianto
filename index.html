@@ -237,10 +237,12 @@
       <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/its__rd.02/" class="text-white fw-bold">FajarArdianto</a> | &copy; 2025</p>
     </footer>
 
-    <footer class="bg-primary text-white text-center pb-2">
+    <footer class="bg-primary text-white text-center pb-2 my-whatsapp">
       <p>
         Contact Our Whatsapp <i class="bi bi-whatsapp text-success fw-bold"></i
-        ><a href="https://api.whatsapp.com/send?phone=6281333977628&text=Hi!%0A%0AI%27m%20interested%20about%20your%20design%20services%2C%20can%20I%20ask%20for%20more%20information%3F" class="text-white fw-bold">+62 813-3397-7628</a>
+        ><a href="https://api.whatsapp.com/send?phone=6281333977628&text=Hi!%0A%0AI%27m%20interested%20about%20your%20design%20services%2C%20can%20I%20ask%20for%20more%20information%3F" id="my-whatsapp" class="text-white fw-bold"
+          >+62 813-3397-7628</a
+        >
       </p>
     </footer>
     <!-- Footer End -->
@@ -273,8 +275,16 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
 
-      window.open(url);
+    <script>
+      function openLinkInNewTab(url) {
+        window.open(url, "_blank");
+      }
+      document.getElementById("my-whatsapp").addEventListener("click", function (event) {
+        event.preventDefault();
+        openLinkInNewTab(this.href);
+      });
     </script>
   </body>
 </html>
